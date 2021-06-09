@@ -25,7 +25,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Isi file</h5>
                         <hr>
-                        <p class="card-text"><?= file_get_contents("file/{$_GET['file']}") ?></p>
+                        <p class="card-text"><?= !isset($_GET['file']) ?: file_get_contents("file/{$_GET['file']}") ?></p>
                     </div>
                 </div>
             </div>
